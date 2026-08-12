@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benim Sitem</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#080b14;color:#fff;line-height:1.6}
+nav{position:fixed;top:0;width:100%;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;background:rgba(8,11,20,.8);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:24px;font-weight:bold;color:#7c5cff}
+nav a{color:#ddd;text-decoration:none;margin-left:22px}
+nav a:hover{color:#9d8aff}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 20px;background:radial-gradient(circle at 50% 30%,#21184a 0,#080b14 55%)}
+.hero h1{font-size:clamp(48px,9vw,90px);margin-bottom:10px}
+.hero h1 span{color:#8b6cff}
+.hero p{color:#aaa;font-size:20px;margin-bottom:28px}
+.btn{display:inline-block;background:#7c5cff;color:white;text-decoration:none;padding:13px 24px;border-radius:12px;font-weight:bold;transition:.2s}
+.btn:hover{transform:translateY(-3px);background:#947cff}
+section{max-width:1000px;margin:auto;padding:90px 25px}
+.title{font-size:38px;margin-bottom:35px}
+.card{background:#111625;border:1px solid #252c40;border-radius:18px;padding:25px;margin-bottom:18px;transition:.2s}
+.card:hover{transform:translateY(-4px);border-color:#7c5cff}
+.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+footer{text-align:center;padding:35px;color:#777;border-top:1px solid #202535}
+#top{display:none;position:fixed;right:20px;bottom:20px;border:0;background:#7c5cff;color:#fff;border-radius:50%;width:45px;height:45px;font-size:20px;cursor:pointer}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">BenimSitem</div>
+  <div>
+    <a href="#hakkimda">Hakkımda</a>
+    <a href="#oyunlar">Oyunlar</a>
+    <a href="#projeler">Projeler</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <h1>Merhaba, ben <span>Ben</span> 👋</h1>
+    <p>Kendi küçük internet köşeme hoş geldin.</p>
+    <a class="btn" href="#hakkimda">Siteyi Keşfet</a>
+  </div>
+</header>
+
+<section id="hakkimda">
+  <h2 class="title">👤 Hakkımda</h2>
+  <div class="card">
+    <h3>Ben kimim?</h3>
+    <p>Buraya kendin hakkında istediğin bilgileri yazabilirsin. Bu siteyi HTML, CSS ve JavaScript kullanarak hazırladım.</p>
+  </div>
+</section>
+
+<section id="oyunlar">
+  <h2 class="title">🎮 Oynadığım Oyunlar</h2>
+  <div class="games">
+    <div class="card"><h3>Roblox</h3><p>Favori oyunlarımı burada paylaşabilirim.</p></div>
+    <div class="card"><h3>Minecraft</h3><p>Yaptığım yapılar ve maceralar.</p></div>
+    <div class="card"><h3>Battlefield</h3><p>Oyun deneyimlerim.</p></div>
+  </div>
+</section>
+
+<section id="projeler">
+  <h2 class="title">💻 Projelerim</h2>
+  <div class="card">
+    <h3>İlk Web Sitem</h3>
+    <p>Bu benim ilk kişisel web sitem. Zamanla buraya yeni projeler ekleyebilirim.</p>
+  </div>
+</section>
+
+<footer>© 2026 BenimSitem • Kendi sitemi kendim yaptım 😎</footer>
+
+<button id="top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+window.addEventListener("scroll",()=>{
+  document.getElementById("top").style.display=scrollY>400?"block":"none";
+});
+</script>
+</body>
+</html>
